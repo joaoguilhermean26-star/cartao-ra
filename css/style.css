@@ -92,3 +92,23 @@ nav button[aria-pressed="true"] { background: var(--ouro); color: #17110a; borde
 @media (max-height: 550px) {
   .inicio::before { display: none; }
 }
+
+#area-ra {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#area-ra a-scene {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+}
+
+.a-enter-vr,
+.a-enter-ar {
+  display: none !important;
+}
