@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cartão profissional em RA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="marca"><span class="monograma">JG</span><span>JOÃO GUILHERME<small>PORTFÓLIO INTERATIVO</small></span></div>
+    <p id="status" role="status" aria-live="polite">Carregando experiência...</p>
+  </header>
+
+  <main id="inicio" class="inicio">
+    <section class="apresentacao">
+      <span class="etiqueta"><span class="ponto"></span> PORTFÓLIO EM REALIDADE AUMENTADA</span>
+      <h1>Além do<br> <em>cartão.</em></h1>
+      <p class="subtitulo">Conheça meu perfil, habilidades e projetos através de uma experiência em realidade aumentada.</p>
+      <button id="iniciar" disabled><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v14H3z"/><circle cx="12" cy="13" r="4"/></svg> Iniciar experiência RA <span aria-hidden="true">→</span></button>
+      <p class="dica">Permita o acesso à câmera e aponte para o cartão.</p>
+      <div class="categorias"><span>Perfil</span><span>Habilidades</span><span>Projetos</span><span>Formação</span></div>
+    </section>
+    <footer class="rodape-inicio"><span>JG — TECNOLOGIA DA INFORMAÇÃO</span><a href="https://github.com/joaoguilhermean26-star" target="_blank" rel="noopener">GitHub ↗</a></footer>
+  </main>
+
+  <!-- MindAR rastreia a imagem -->
+  <a-scene embedded mindar-image="imageTargetSrc: ./assets/targets/targets.mind; autoStart: false; uiLoading: no; uiScanning: no; uiError: no"
+    color-space="sRGB" renderer="colorManagement: true; alpha: true" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-assets timeout="15000">
+      <img id="img-perfil" src="assets/images/painel-1.png">
+      <img id="img-habilidades" src="assets/images/painel-2.png">
+      <img id="img-projetos" src="assets/images/painel-3.png">
+      <img id="img-formacao" src="assets/images/painel-4.png">
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-entity id="target" mindar-image-target="targetIndex: 0">
+      <a-plane id="painel" material="src: #img-perfil; shader: flat" width="1" height="0.58" position="0 0.04 0.12" rotation="0 0 0" scale="1.08 1.08 1"></a-plane>
+      <a-box position="0.48 0.38 0.18" width="0.08" height="0.08" depth="0.08" color="#d6ad62" rotation="20 30 15"
+        animation="property: rotation; to: 20 390 15; loop: true; dur: 4500; easing: linear"></a-box>
+    </a-entity>
+  </a-scene>
+
+  <footer id="controles" class="controles" hidden>
+    <p id="instrucao">Aponte para o cartão para visualizar o conteúdo.</p>
+    <nav aria-label="Conteúdo em realidade aumentada">
+      <button data-painel="img-perfil" aria-pressed="true" disabled>Sobre mim</button>
+      <button data-painel="img-habilidades" aria-pressed="false" disabled>Habilidades</button>
+      <button data-painel="img-projetos" aria-pressed="false" disabled>Projetos</button>
+      <button data-painel="img-formacao" aria-pressed="false" disabled>Formação</button>
+    </nav>
+    <button id="parar" class="secundario" disabled>Encerrar câmera</button>
+  </footer>
+</body>
+</html>

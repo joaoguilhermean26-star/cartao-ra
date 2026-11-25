@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 200" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="ouro"><stop stop-color="#b98a35" stop-opacity="0"/><stop offset=".3" stop-color="#d6ad62"/><stop offset=".5" stop-color="#f3d496"/><stop offset=".7" stop-color="#d6ad62"/><stop offset="1" stop-color="#b98a35" stop-opacity="0"/></linearGradient>
+    <pattern id="pontos" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#d6ad62" opacity=".36"/></pattern>
+    <linearGradient id="sombra" x2="0" y2="1"><stop stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+    <mask id="fade"><rect width="1400" height="200" fill="url(#sombra)"/></mask>
+  </defs>
+  <g mask="url(#fade)">
+    <path d="M0 35 C220 -12 430 155 700 155 S1180 -12 1400 35 L1400 200 H0Z" fill="url(#pontos)"/>
+    <path d="M0 35 C220 -12 430 155 700 155 S1180 -12 1400 35" stroke="url(#ouro)" stroke-width="2" fill="none"/>
+    <path d="M0 65 C250 0 440 155 700 166 S1180 0 1400 65" stroke="url(#ouro)" stroke-width="1" opacity=".45" fill="none"/>
+  </g>
+</svg>
