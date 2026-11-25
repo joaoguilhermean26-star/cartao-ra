@@ -1,33 +1,96 @@
-# Meu Cartão Profissional em RA
-Atividade prática de Realidade Aumentada — Aula 02. HTML, CSS, JavaScript, MindAR 1.2.5 e A-Frame 1.5.0.
+\# Cartão Profissional em Realidade Aumentada
 
-## 1. Cartão e autoria
-O cartão preto e dourado com QR Code do GitHub está em `assets/images/cartao.png`. Confira nome, formação, habilidades e projetos antes de entregar. Os quatro painéis têm fontes SVG editáveis. O trabalho pede autoria: explique o auxílio de IA de acordo com as regras do professor.
 
-## 2. Target incluído
-O arquivo `assets/targets/targets.mind` foi fornecido pelo aluno e já está incluído. Contém um target de 1657 x 949 pixels, as mesmas dimensões do cartão atual. O reconhecimento deve ser confirmado pela câmera. Se modificar a imagem, compile novamente no https://hiukim.github.io/mind-ar-js-doc/tools/compile/ e substitua o arquivo .mind.
 
-## 3. Executar e publicar
-Não é necessário npm. Use Live Server no VS Code ou `python -m http.server 8000` no terminal na raiz da pasta e acesse http://localhost:8000. Câmera exige contexto seguro; localhost é permitido, mas o IP HTTP da rede normalmente não é.
+Projeto acadêmico desenvolvido na disciplina de Realidade Aumentada do curso de Análise e Desenvolvimento de Sistemas — SENAI.
 
-Crie um repositório vazio chamado `cartao-ra` no GitHub. Com o target já incluído:
-```sh
-git init
-git add .
-git commit -m "Cartao profissional em realidade aumentada"
-git branch -M main
-git remote add origin https://github.com/joaoguilhermean26-star/cartao-ra.git
-git push -u origin main
-```
-No GitHub, vá a Settings > Pages > Build and deployment > Source: Deploy from a branch > main > /(root) > Save. Abra a URL HTTPS que o GitHub apresentar após a publicação. Os scripts CDN precisam de internet.
 
-## 4. Teste no celular
-Abra o site publicado, toque em Iniciar experiência RA e permita o acesso. Imprima cartao.png (sem recortar ou distorcer) ou abra a imagem em outro dispositivo. Aponte a câmera para o cartão. O painel aparece ancorado ao cartão; os botões selecionam quatro blocos de informações em RA. O cubo demonstra Rotation; o painel usa Position e Scale. Preencha TESTES.md após realizar os cinco testes sem alterar o código.
 
-## 5. Entrega
-- PNG final do cartão.
-- Repositório com o código e targets.mind.
-- Link HTTPS do GitHub Pages.
-- Registro dos testes e conclusão baseada nas observações reais.
+\## Sobre o projeto
 
-Documentação: https://hiukim.github.io/mind-ar-js-doc/ e https://aframe.io/docs/.
+
+
+O projeto tem como objetivo transformar um cartão profissional em uma experiência interativa de Realidade Aumentada, permitindo a visualização de informações profissionais por meio da câmera do celular, diretamente pelo navegador.
+
+
+
+\## Funcionalidades
+
+
+
+\- Reconhecimento do cartão profissional.
+
+\- Rastreamento de imagem em tempo real.
+
+\- Visualização do perfil profissional.
+
+\- Apresentação de habilidades, projetos e formação acadêmica.
+
+\- Interface responsiva para dispositivos móveis.
+
+
+
+\## Tecnologias utilizadas
+
+
+
+\- HTML5
+
+\- CSS3
+
+\- JavaScript
+
+\- MindAR
+
+\- A-Frame
+
+\- GitHub Pages
+
+
+
+\## Cartão profissional
+
+
+
+!\[Cartão profissional](assets/images/cartao.png)
+
+
+
+\## Como utilizar
+
+
+
+1\. Acesse a aplicação pelo celular.
+
+2\. Clique em "Iniciar experiência RA".
+
+3\. Permita o acesso à câmera.
+
+4\. Aponte a câmera para o cartão profissional.
+
+5\. Explore as informações disponíveis em Realidade Aumentada.
+
+
+
+\## Acesse o projeto
+
+
+
+\[Iniciar experiência em Realidade Aumentada](https://joaoguilhermean26-star.github.io/cartao-ra/)
+
+
+
+\## Desenvolvedor
+
+
+
+\*\*João Guilherme\*\*
+
+
+
+Estudante de Análise e Desenvolvimento de Sistemas — SENAI.
+
+
+
+\[GitHub](https://github.com/joaoguilhermean26-star)
+
